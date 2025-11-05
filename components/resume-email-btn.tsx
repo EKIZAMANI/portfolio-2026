@@ -9,7 +9,7 @@ export default function ResumeEmailButtons() {
         variant="outline" 
         size="sm" 
         className="flex items-center gap-2"
-        onClick={() => window.open('https://drive.google.com/file/d/1G_v3SECTlFTvtg4_NcpHsgBaOZ-Bazqx/view?usp=sharing', '_blank')}
+        onClick={() => window.open('https://drive.google.com/file/d/1O7r7BR_dRjqtlyrsnaNqtDjBnVQtEgpH/view?usp=sharing', '_blank')}
       >
         <Paperclip className="h-4 w-4" />
         Resume
