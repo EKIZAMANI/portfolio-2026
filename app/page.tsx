@@ -53,7 +53,7 @@ export default function HomePage() {
 
           <div className="space-y-4 max-w-7xl">
             <h3 className="max-w-4xl !font-normal">
-  👋 Hi, my name is <strong>Varun Kothandaraman</strong>. I’m a designer and mechanical engineer obsessed with building things that move.
+  👋 Hi, my name is <strong>Varun Kothandaraman</strong>. I’m a design and engineering student obsessed with building things that move.
 
   I previously worked as an R&D engineering intern at{" "}
   <Link
