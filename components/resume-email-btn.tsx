@@ -4,42 +4,42 @@ import { AtSign, Paperclip, Github, Linkedin } from 'lucide-react';
 
 export default function ResumeEmailButtons() {
   return (
-    <div className="flex gap-3">
-      <Button 
-        variant="outline" 
-        size="sm" 
+    <div className="flex flex-wrap gap-3">
+      <Button
+        variant="outline"
+        size="sm"
         className="flex items-center gap-2"
-        onClick={() => window.open('https://drive.google.com/file/d/1O7r7BR_dRjqtlyrsnaNqtDjBnVQtEgpH/view?usp=sharing', '_blank')}
+        onClick={() => window.open('mailto:eki.zamani@gmail.com?subject=Resume%20Request', '_blank')}
       >
         <Paperclip className="h-4 w-4" />
         Resume
       </Button>
-      
-      <Button 
-        variant="outline" 
-        size="sm" 
+
+      <Button
+        variant="outline"
+        size="sm"
         className="flex items-center gap-2"
-        onClick={() => window.open('mailto:kothandv@mcmaster.ca', '_blank')}
+        onClick={() => window.open('mailto:eki.zamani@gmail.com', '_blank')}
       >
         <AtSign className="h-4 w-4" />
         Email
       </Button>
 
-      <Button 
-        variant="outline" 
-        size="sm" 
-        className="flex items-center gap-2 "
-        onClick={() => window.open('https://www.linkedin.com/in/varun-ram/', '_blank')}
+      <Button
+        variant="outline"
+        size="sm"
+        className="flex items-center gap-2"
+        onClick={() => window.open('https://www.linkedin.com/', '_blank')}
       >
         <Linkedin className="h-4 w-4" />
         LinkedIn
       </Button>
 
-      <Button 
-        variant="outline" 
-        size="sm" 
+      <Button
+        variant="outline"
+        size="sm"
         className="flex items-center gap-2 hidden md:flex"
-        onClick={() => window.open('https://github.com/Nuravar', '_blank')}
+        onClick={() => window.open('https://github.com/', '_blank')}
       >
         <Github className="h-4 w-4" />
         GitHub

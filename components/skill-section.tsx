@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Image from 'next/image';
 
-// Define interfaces for type safety
 interface Skill {
   name: string;
   icon: string | null;
@@ -11,8 +10,8 @@ interface Skill {
 interface SkillsData {
   languages: Skill[];
   frameworks: Skill[];
-  technologies: Skill[];
-  manufacturing: Skill[];
+  tools: Skill[];
+  strengths: Skill[];
 }
 
 interface SkillItemProps {
@@ -36,48 +35,34 @@ const SkillsSection: React.FC = () => {
 
   const skillsData: SkillsData = {
     languages: [
-      { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
       { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-      { name: 'C++', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
-      { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
-      { name: 'Go', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
-      { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+      { name: 'Kotlin', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
       { name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-      { name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-      { name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' }
+      { name: 'XML', icon: null },
+      { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' }
     ],
     frameworks: [
-      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-      { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-      { name: 'WebSockets', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg' },
-      { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
-      { name: 'gRPC', icon: null },
-      { name: 'OpenCV', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg' },
-      { name: 'MATLAB Simulink', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' }
+      { name: 'React.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+      { name: 'Laravel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg' },
+      { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' }
     ],
-    technologies: [
-      { name: 'Git/GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-      { name: 'Raspberry Pi', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg' },
-      { name: 'SolidWorks', icon: null },
-      { name: 'Autodesk Inventor', icon: null },
-      { name: 'CATIA V5', icon: null },
-      { name: 'PTC Creo', icon: null },
-      { name: 'MATLAB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' },
-      { name: 'Digital Image Correlation', icon: null },
-      { name: 'FEA Analysis', icon: null }
+    tools: [
+      { name: 'Figma', icon: null },
+      { name: 'Google Workspace', icon: null },
+      { name: 'Microsoft Office', icon: null },
+      { name: 'UI/UX Design', icon: null },
+      { name: 'Databases', icon: null },
+      { name: 'Server Configuration', icon: null }
     ],
-    manufacturing: [
-      { name: 'GD&T', icon: null },
-      { name: 'Root-Cause Analysis', icon: null },
-      { name: 'Material Testing', icon: null },
-      { name: 'Machining', icon: null },
-      { name: 'SEM Microscopy', icon: null },
-      { name: 'Brazing/Welding', icon: null },
-      { name: 'Failure Analysis', icon: null },
-      { name: 'Manufacturing Processes', icon: null },
-      { name: 'Quality Control', icon: null },
-      { name: 'Thermal Systems', icon: null }
+    strengths: [
+      { name: 'Communication Skills', icon: null },
+      { name: 'Problem Solving', icon: null },
+      { name: 'Documentation', icon: null },
+      { name: 'Collaboration', icon: null },
+      { name: 'Adaptability', icon: null },
+      { name: 'Discipline', icon: null }
     ]
   };
 
@@ -153,31 +138,17 @@ const SkillsSection: React.FC = () => {
 
   return (
     <div className="hidden lg:block w-full py-8">
-
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
-        <SkillColumn
-          title="Languages"
-          skills={skillsData.languages}
-        />
-        <SkillColumn
-          title="Frameworks"
-          skills={skillsData.frameworks}
-        />
-        <SkillColumn
-          title="Technologies"
-          skills={skillsData.technologies}
-        />
-        <SkillColumn
-          title="Manufacturing"
-          skills={skillsData.manufacturing}
-        />
+        <SkillColumn title="Languages" skills={skillsData.languages} />
+        <SkillColumn title="Frameworks" skills={skillsData.frameworks} />
+        <SkillColumn title="Tools" skills={skillsData.tools} />
+        <SkillColumn title="Strengths" skills={skillsData.strengths} />
       </div>
 
-      <div className=" text-center">
+      <div className="text-center">
         <button
           onClick={toggleExpanded}
-         className="flex items-center justify-center space-x-2 mx-auto px-6 py-2 transition-all duration-300 ease-out  hover:bg-[#28201d] rounded-lg group"
+          className="flex items-center justify-center space-x-2 mx-auto px-6 py-2 transition-all duration-300 ease-out hover:bg-[#28201d] rounded-lg group"
         >
           {isExpanded ? (
             <ChevronUp className="w-4 h-4 transition-transform text-muted-foreground duration-200 group-hover:scale-110" />

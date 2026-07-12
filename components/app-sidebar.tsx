@@ -18,68 +18,29 @@ import {
   Paperclip,
   Linkedin,
   Github,
-  ExternalLink,
   ChevronRight,
-  CarFront,
   University,
   File,
 } from "lucide-react";
 import Link from "next/link";
 
 const navigationItems = [
-  { id: "dana", name: "Dana Inc.", href: "/dana", icon: CarFront },
-  {
-    id: "mcmaster-formula",
-    name: "McMaster Formula Student",
-    href: "https://macformularacing.com/",
-    icon: University,
-  },
-  {
-    id: "mcmaster-solar",
-    name: "McMaster Solar Car Project",
-    href: "https://www.mcmastersolarcar.com/",
-    icon: University,
-  },
+  { id: "kejaksaan", name: "Kejaksaan Tinggi Aceh", href: "#", icon: University },
+  { id: "bangkit", name: "Bangkit Academy", href: "#", icon: University },
+  { id: "syiah", name: "Universitas Syiah Kuala", href: "#", icon: University },
 ];
 
 const projectItems = [
- 
-  { id: "heatsink", name: "Heatsink Design", href: "/heatsink", icon: File },
-  {
-    id: "slacker-chores",
-    name: "Slacker Chores",
-    href: "/slacker",
-    icon: File,
-  },
-  { id: "keysight", name: "Keysight", href: "/keysight", icon: File },
-  { id: "pace", name: "Pace++", href: "/paceplusplus", icon: File },
+  { id: "capytype", name: "CapyType", href: "#", icon: File },
+  { id: "profidom", name: "Profidom", href: "#", icon: File },
+  { id: "employee-system", name: "Employee System", href: "#", icon: File },
 ];
 
 const socialItems = [
-  {
-    id: "email-link",
-    name: "Email",
-    href: "mailto:kothandv@mcmaster.ca",
-    icon: AtSign,
-  },
-  {
-    id: "resume-link",
-    name: "Resume",
-    href: "https://drive.google.com/file/d/1G_v3SECTlFTvtg4_NcpHsgBaOZ-Bazqx/view?usp=sharing",
-    icon: Paperclip,
-  },
-  {
-    id: "linkedin-link",
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/varun-ram/",
-    icon: Linkedin,
-  },
-  {
-    id: "github-link",
-    name: "Github",
-    href: "https://github.com/Nuravar",
-    icon: Github,
-  },
+  { id: "email-link", name: "Email", href: "mailto:eki.zamani@gmail.com", icon: AtSign },
+  { id: "resume-link", name: "Resume", href: "mailto:eki.zamani@gmail.com?subject=Resume%20Request", icon: Paperclip },
+  { id: "linkedin-link", name: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
+  { id: "github-link", name: "Github", href: "https://github.com/", icon: Github },
 ];
 
 export function AppSidebar() {
@@ -116,7 +77,7 @@ export function AppSidebar() {
         group-hover:translate-x-0.5 group-hover:tracking-wide
       "
                   >
-                    Varun Kothandararaman
+                    M. Zaki Zamani
                   </span>
                 </div>
               </Link>
@@ -278,10 +239,6 @@ export function AppSidebar() {
                       <span className="font-light transition-all duration-200 ease-out">
                         {item.name}
                       </span>
-                      <ExternalLink
-                        className="ml-auto w-3 h-3 text-white/40 group-hover:text-white/60 transition-colors duration-200"
-                        strokeWidth={1.5}
-                      />
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

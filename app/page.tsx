@@ -16,7 +16,7 @@ import { Home } from "lucide-react";
 import GravityGrid from "@/components/ui/gravity-grid";
 import LocationAndTimeDisplay from "@/components/location-indicator";
 import ResumeEmailButtons from "@/components/resume-email-btn";
-import Link from "next/link";
+
 export default function HomePage() {
   return (
     <SidebarProvider defaultOpen={false}>
@@ -52,47 +52,18 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-4 max-w-7xl">
-            <h3 className="max-w-4xl !font-normal">
-  👋 Hi, my name is <strong>Varun Kothandaraman</strong>. I’m a design and engineering student obsessed with building things that move.
-
-  I previously worked as an R&D engineering intern at{" "}
-  <Link
-    href="https://www.dana.com/"
-    prefetch={false}
-    className="underline hover:text-white duration-200 ease-in"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Dana
-  </Link>
-  , where I designed and prototyped thermal systems for electric vehicles. My experience also includes working on student design teams for{" "}
-  <Link
-    href="https://macformularacing.com/"
-    prefetch={false}
-    className="underline hover:text-white duration-200 ease-in"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Formula Student
-  </Link>{" "}
-  and{" "}
-  <Link
-    href="https://mcmaster.ca/solarcar"
-    prefetch={false}
-    className="underline hover:text-white duration-200 ease-in"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Solar Car Racing 
-  </Link>{" "}
-  at McMaster University.
-  <br />
-  <br />
-  I'm currently studying Mechatronics and Biomedical Engineering at McMaster, and I’ve spent the last three years as a teaching assistant for engineering courses focused on building electromechanical projects.
-</h3>
+            <h3 className="max-w-4xl !font-normal leading-relaxed">
+              👋 Hi, I’m <strong>M. Zaki Zamani</strong>, an Informatics graduate from Universitas Syiah Kuala with a strong interest in web development, UI/UX design, and building practical digital solutions.
+              <br />
+              <br />
+              I completed an internship at <strong>Kejaksaan Tinggi Aceh</strong>, where I helped develop a web-based employee management system as both a UI/UX designer and web developer. I also joined <strong>Bangkit Academy</strong>, which strengthened my skills in Android development, modern product creation, and collaborative problem solving.
+              <br />
+              <br />
+              I enjoy turning ideas into functional interfaces and applications that are user-friendly, reliable, and impactful.
+            </h3>
 
             <div>
-              <div className=" text-sm flex flex-wrap items-center gap-2">
+              <div className="text-sm flex flex-wrap items-center gap-2">
                 <div className="relative">
                   <div
                     className="w-2 h-2 rounded-full bg-green-400 animate-pulse"
@@ -102,8 +73,7 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 w-2 h-2 rounded-full bg-green-400 animate-ping opacity-20" />
                 </div>
-                Currently seeking{" "}
-                <strong> Summer 2026 Engineering Internships</strong>
+                Open to opportunities in <strong>web development, UI/UX, and digital product work</strong>
               </div>
             </div>
 
