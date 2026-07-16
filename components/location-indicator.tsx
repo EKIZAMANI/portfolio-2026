@@ -2,21 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { MapPin, Clock } from 'lucide-react'; // Import icons from lucide-react
 
 const LocationAndTimeDisplay = () => {
-  const [torontoTime, setTorontoTime] = useState('');
+  const [acehTime, setAcehTime] = useState('');
 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      // Options for formatting the time to Toronto's timezone
-      // Use 'as const' to ensure literal types are inferred for properties
       const options = {
         hour: '2-digit',
         minute: '2-digit',
         hour12: true,
-        timeZone: 'America/Toronto'
-      } as const; // <--- Add 'as const' here
+        timeZone: 'Asia/Jakarta'
+      } as const;
 
-      setTorontoTime(now.toLocaleTimeString('en-US', options));
+      setAcehTime(now.toLocaleTimeString('en-US', options));
     };
 
     // Update time immediately on component mount
@@ -34,13 +32,13 @@ const LocationAndTimeDisplay = () => {
       {/* Location */}
       <div className="flex items-center gap-1">
         <MapPin className="w-3 h-3" strokeWidth={1.5} />
-        <small>Toronto, ON</small>
+        <small>Aceh, Indonesia</small>
       </div>
 
       {/* Time */}
       <div className="flex items-center gap-1">
         <Clock className="w-3 h-3" strokeWidth={1.5} />
-        <small>{torontoTime}</small>
+        <small>{acehTime} WIB</small>
       </div>
     </div>
   );
